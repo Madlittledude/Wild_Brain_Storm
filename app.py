@@ -80,7 +80,7 @@ if "messages" not in st.session_state:
 
 "Over the years, The Neptunas have undergone several lineup changes, with the current members being Judy Cocuzza, Laura Bethita Neptuna, Leslita, Pamela Moore (Pamita Neptuna), and Toast. In 2020, they released a new album called "Mermaid A Go Go," which featured all three original members: Leslita, Pamita, and Laura Bethita. The album was well-received and showcased the band's growth, with vocals appearing on most of the tracks."
 
-"Despite not having specific milestones readily available, The Neptunas' formation, album releases, and touring history have demonstrated their significant impact on the surf instrumental and garage-pop scenes."
+"Despite not having specific milestones readily available, The Neptunas' formation, album releases, and touring history have demonstrated their significant impact on the surf instrumental and garage-pop scenes.")
     }]
 
 
