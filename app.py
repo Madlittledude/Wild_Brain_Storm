@@ -14,7 +14,7 @@ def display_intro():
     st.write("This tool isn't a separate entity with knowledge of facts or previous conversations, nor a repository of legal precedents. Rather, think of it as a reflection of your own thoughts and ideas, a way to bounce them off a vast textual model.")
     st.write("Here's how this tool can assist you:")
     st.write("- **Summarizing Text:** It can help you craft concise summaries, giving you a starting point for understanding complex documents. Simply copy and paste the text into the chatbox.")
-    st.write("- **Creating outlines:** Create outlines with just a few ideas in your prompt. The more detailed you aer, the better the response.")
+    st.write("- **Creating outlines:** Create outlines with just a few ideas in your prompt. The more detailed you are, the better the response.")
     st.write("- **Brainstorming and Organizing Thoughts:** It can help you layout, shape, and explore ideas through your conversation.")
     st.write("- **Structuring Unstructured Text:** It guides you in organizing chaotic text by distilling it.")
     st.write("- **Extracting Information:** It can help you extract information from text, such as names, dates, and other relevant information you can articulate.")
