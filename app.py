@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 import os
 # Set up the page layout
-st.set_page_config(page_title="PADTY", page_icon="5_leaf_clover.png", layout='wide')
+st.set_page_config(page_title="Wild Brain Storm :storm:", page_icon="5_leaf_clover.png", layout='wide')
 
 # Function to display chat messages
 def display_chat_message(role, content,avatar):
@@ -10,14 +10,13 @@ def display_chat_message(role, content,avatar):
         st.markdown(content)
 
 def display_intro():
-    st.title("Welcome, Colin, to Your Session with Padty the Caddie :golfer:")
-    st.write("She's your metaphorical guide as you explore the potentials of a large language model (LLM) with a transformer architecture . Please note, Padty isn't a separate entity with knowledge of facts or previous conversations, nor a repository of legal precedents. Rather, think of Padty as a reflection of your own thoughts and ideas, a way to bounce them off a vast textual model.")
-    st.write("Here's how Padty can assist you:")
-    st.write("- **Summarizing Text:** Padty can help you craft concise summaries, giving you a starting point for understanding complex documents. Simply copy and paste the text into the chatbox.")
-    st.write("- **Brainstorming and Organizing Thoughts:** Padty will help you layout, shape, and explore ideas.")
-    st.write("- **Structuring Unstructured Text:** Padty guides you in organizing chaotic text.")
-    st.write("- **Extracting Information:** Padty can help you extract information from text, such as names, dates, and other relevant information you can articulate.")
-    st.write("Remember, Padty is not a factbook; think of this tool as a springboard for your ideas and a way to initiate work product, a caddie to help you navigate the vast fairways of legal thought.")
+    st.title("Welcome, Leslita, to Your Session with Wild Brain Storm :lightning:")
+    st.write("Here's how this tool can assist you:")
+    st.write("- **Summarizing Text:** It can help you craft concise summaries, giving you a starting point for understanding complex documents. Simply copy and paste the text into the chatbox.")
+    st.write("- **Brainstorming and Organizing Thoughts:** It will help you layout, shape, and explore ideas.")
+    st.write("- **Structuring Unstructured Text:** It guides you in organizing chaotic text.")
+    st.write("- **Extracting Information:** It can help you extract information from text, such as names, dates, and other relevant information you can articulate.")
+    st.write("Remember, Brain Storm is not a factbook; think of this tool as a springboard for your ideas and a way to initiate work product.")
     st.write(":heart: Max")
 
 colin = "https://raw.githubusercontent.com/Madlittledude/Wild_Brain_Storm/main/leslie.png"
