@@ -32,7 +32,7 @@ def display_chat_interface():
         display_chat_message(message["role"], message["content"],avatar)
 
     # User input
-    prompt = st.chat_input("Start thinking with your fingers...get your thoughts out")
+    prompt = st.chat_input()
     if prompt:
         # Set the state to indicate the user has sent their first message
         st.session_state.first_message_sent = True
