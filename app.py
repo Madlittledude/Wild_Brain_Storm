@@ -58,7 +58,7 @@ def display_chat_interface():
 
 # Initialization logic
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "GPT-3.5-turbo"
+    st.session_state["openai_model"] = "gpt-4"
 
 if "messages" not in st.session_state:
     st.session_state.messages = [{
