@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 import os
 # Set up the page layout
-st.set_page_config(page_title="Wild Brain Storm :lightning:", page_icon="5_leaf_clover.png", layout='wide')
+st.set_page_config(page_title="PADTY", page_icon="5_leaf_clover.png", layout='wide')
 
 # Function to display chat messages
 def display_chat_message(role, content,avatar):
@@ -10,36 +10,35 @@ def display_chat_message(role, content,avatar):
         st.markdown(content)
 
 def display_intro():
-    st.title("Welcome, Leslie, to Your Session with Wild Brain Storm")
-    st.write("This tool isn't a separate entity with knowledge of facts or previous conversations, nor a repository of legal precedents. Rather, think of it as a reflection of your own thoughts and ideas, a way to bounce them off a vast textual model.")
-    st.write("Here's how this tool can assist you:")
-    st.write("- **Summarizing Text:** It can help you craft concise summaries, giving you a starting point for understanding complex documents. Simply copy and paste the text into the chatbox.")
-    st.write("- **Creating outlines:** Create outlines with just a few ideas in your prompt. The more detailed you aer, the better the response.")
-    st.write("- **Brainstorming and Organizing Thoughts:** It can help you layout, shape, and explore ideas through your conversation.")
-    st.write("- **Structuring Unstructured Text:** It guides you in organizing chaotic text by distilling it.")
-    st.write("- **Extracting Information:** It can help you extract information from text, such as names, dates, and other relevant information you can articulate.")
-    st.write("Remember, this Brain Storm tool is not a factbook; think of this tool as a springboard for your ideas and a way to initiate work product.")
+    st.title("Welcome, Colin, to Your Session with Padty the Caddie :golfer:")
+    st.write("She's your metaphorical guide as you explore the potentials of a large language model (LLM) with a transformer architecture . Please note, Padty isn't a separate entity with knowledge of facts or previous conversations, nor a repository of legal precedents. Rather, think of Padty as a reflection of your own thoughts and ideas, a way to bounce them off a vast textual model.")
+    st.write("Here's how Padty can assist you:")
+    st.write("- **Summarizing Text:** Padty can help you craft concise summaries, giving you a starting point for understanding complex documents. Simply copy and paste the text into the chatbox.")
+    st.write("- **Brainstorming and Organizing Thoughts:** Padty will help you layout, shape, and explore ideas.")
+    st.write("- **Structuring Unstructured Text:** Padty guides you in organizing chaotic text.")
+    st.write("- **Extracting Information:** Padty can help you extract information from text, such as names, dates, and other relevant information you can articulate.")
+    st.write("Remember, Padty is not a factbook; think of this tool as a springboard for your ideas and a way to initiate work product, a caddie to help you navigate the vast fairways of legal thought.")
     st.write(":heart: Max")
 
-leslie = "https://raw.githubusercontent.com/Madlittledude/Wild_Brain_Storm/main/leslie.png"
-wild = "https://raw.githubusercontent.com/Madlittledude/Wild_Brain_Storm/main/wild.png"
+colin = "https://raw.githubusercontent.com/Madlittledude/Wild_Brain_Storm/main/leslie.png"
+padty = "https://raw.githubusercontent.com/Madlittledude/Wild_Brain_Storm/main/wild.png"
 def display_chat_interface():
 
     for message in st.session_state.messages:
         if message["role"] == "system":
             continue
-        avatar = wild if message["role"] == "assistant" else leslie
+        avatar = padty if message["role"] == "assistant" else colin
         display_chat_message(message["role"], message["content"],avatar)
 
     # User input
-    prompt = st.chat_input("Start writing down your thoughts.......",key = 'chat')
+    prompt = st.chat_input("Start thinking with your fingers...get your thoughts out")
     if prompt:
         # Set the state to indicate the user has sent their first message
         st.session_state.first_message_sent = True
         st.session_state.messages.append({"role": "user", "content": prompt})
-        display_chat_message("user", prompt,leslie)
+        display_chat_message("user", prompt,colin)
 
-        with st.chat_message("assistant",avatar=wildy):
+        with st.chat_message("assistant",avatar=padty):
             message_placeholder = st.empty()
             full_response = ""
             for response in openai.ChatCompletion.create(
@@ -63,17 +62,15 @@ if "openai_model" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = [{
         "role": "system",
-        "content": ("You are Jack Wild from HR Puff n Stuff, and you've had a career change at 25. Now you serving Leslie (the user) as her brain storming assistant. Leslie works as an attorney at a municipal law firm. Your primary role is to facilitate productive and constructive brainstorm sessions. The user may copy and paste text from other sources or input their own text, and you'll assist in structuring her thoughts."
-                    "Your professional specialties as an assistant include:\n"
+        "content": ("You are Jack wild, serving Leslita (the user) as a brainstorm assistant at a municipal law firm. Your primary role is to facilitate productive and constructive brainstorm sessions. The user may copy and paste text from other sources or input their own text, and you'll assist in structuring their thoughts."
+                    "Your specialties include:\n"
                     "- Summarizing text\n"
-                    "- Creating outlines for anything you're working on. Just have them give you some points to follow\n"
                     "- Understanding and articulating the construction of ideas in text\n"
                     "- Brainstorming and organizing thoughts\n"
                     "- Structuring unstructured text\n"
                     "- Extracting information from text\n"
-                    "In cases where you're asked the follwoing, I want you to respond accordingly:"
-                    "If asked about your origins, share a whimsically fabricated tale that ends with a refusal to reveal the truth.\n")
-  }]
+                   )
+    }]
 
 
 
@@ -91,6 +88,5 @@ display_chat_interface()
 
 
 
-display_chat_interface()
 
 
