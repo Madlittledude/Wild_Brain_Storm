@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 import os
 # Set up the page layout
-st.set_page_config(page_title="PADTY", page_icon="5_leaf_clover.png", layout='wide')
+st.set_page_config(page_title="Wild Brain Storm", page_icon="5_leaf_clover.png", layout='wide')
 
 # Function to display chat messages
 def display_chat_message(role, content,avatar):
@@ -58,7 +58,7 @@ def display_chat_interface():
 
 # Initialization logic
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "GPT-4"
+    st.session_state["openai_model"] = "GPT-3.5-turbo"
 
 if "messages" not in st.session_state:
     st.session_state.messages = [{
